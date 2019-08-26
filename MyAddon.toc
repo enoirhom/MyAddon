@@ -1,0 +1,8 @@
+## Interface: 11302
+## Title: | SellGrey
+## Author: Emil
+## Notes: This a test
+## Version: 0.8
+## DefaultState: enabled
+
+MyAddon.lua
