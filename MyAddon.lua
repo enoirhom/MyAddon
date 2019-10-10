@@ -17,13 +17,15 @@ local function checkBags(self, event, ...)
 		end
 	end
 
-	local gold = totalAmount / 10000;
-	local roundedGold = gold - (gold % 1);
-	local silver = (gold - roundedGold) * 100;
-	local roundedSilver = silver - (silver % 1);
-	local copper = (silver - roundedSilver) * 100;
+	if totalAmount ~= 0 do
+		local gold = totalAmount / 10000;
+		local roundedGold = gold - (gold % 1);
+		local silver = (gold - roundedGold) * 100;
+		local roundedSilver = silver - (silver % 1);
+		local copper = (silver - roundedSilver) * 100;
 
-	DEFAULT_CHAT_FRAME:AddMessage("Recettes: " .. roundedGold .. "g " .. roundedSilver .. "s " .. copper .. "c!");
+		DEFAULT_CHAT_FRAME:AddMessage("Recettes: " .. roundedGold .. "g " .. roundedSilver .. "s " .. copper .. "c!");
+	end
 end
 
 DEFAULT_CHAT_FRAME:AddMessage("Hello " .. UnitName("player") .. " beau gosse");
