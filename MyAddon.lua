@@ -17,7 +17,7 @@ local function checkBags(self, event, ...)
 		end
 	end
 
-	if totalAmount ~= 0 do
+	if totalAmount ~= 0 then
 		local gold = totalAmount / 10000;
 		local roundedGold = gold - (gold % 1);
 		local silver = (gold - roundedGold) * 100;
